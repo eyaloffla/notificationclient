@@ -14,14 +14,14 @@ public class MailTester {
 //		}
 	public static void main(String[] args) {
 		
-		//boolean result = true;
+		boolean result = true;
 		try {
-			InternetAddress emailAddr = new InternetAddress("sssddds@gmail.com");
+			InternetAddress emailAddr = new InternetAddress("sssddds1133335788@gmail.com");
 			emailAddr.validate();
 		} catch (AddressException ex) {
-		//	result = false;
+			result = false;
 		}
-//		System.out.println(" This mail is valid: " + isValidEmailAddress("rosenzvaig"));
+		System.out.println(" This mail is valid: " + result);
 
 	}
 //
