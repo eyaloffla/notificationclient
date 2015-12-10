@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
 	<display-name>NotificationClient</display-name>
+	
+	<security-constraint>
+    <web-resource-collection>
+        <web-resource-name>BaseServlet</web-resource-name>
+            <url-pattern>/RestClientServlet/07ba396e-a2ed-4a18-88e6-26c5401c75c0</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TAIUserRole</role-name>
+        </auth-constraint>
+   </security-constraint>
+   <security-role id="SecurityRole_TAIUserRole" >
+    <description>This is the role that MFP OAuthTAI uses to protect the resource, and it is required to be mapped to 'ALL_AUTHENTICATED_USERS' in Liberty</description> 
+    <role-name>TAIUserRole</role-name>
+   </security-role>
+	
+	
 	<servlet>
 		<description>
 		JAX-RS Tools Generated - Do not modify</description>

@@ -20,10 +20,5 @@ public class SimpleWS extends javax.ws.rs.core.Application{
         return "Hello Rest World !";
     }
 	
-	
-	//@Path("/message")
-	//public String message(){
-	//	return "Shalom";
-	//}
 
 }

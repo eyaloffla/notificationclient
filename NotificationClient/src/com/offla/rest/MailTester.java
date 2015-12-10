@@ -8,10 +8,6 @@ import javax.mail.internet.AddressException;
 public class MailTester {
 
 
-	
-//	public static boolean isValidEmailAddress(java.lang.String email) {
-//		   return result;
-//		}
 	public static void main(String[] args) {
 		
 		boolean result = true;
@@ -24,5 +20,5 @@ public class MailTester {
 		System.out.println(" This mail is valid: " + result);
 
 	}
-//
+
 }

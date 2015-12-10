@@ -14,6 +14,7 @@ public class MyRestApplication extends Application {
         Set<Class<?>> classes = new HashSet<Class<?>>();
           
         classes.add(SimpleWS01.class);
+        classes.add(SimpleWS.class);
         return classes;
     }
 
