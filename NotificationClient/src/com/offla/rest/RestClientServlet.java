@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.core.MediaType;
 
 import com.ibm.websphere.security.cred.WSCredential;
-import com.worklight.oauth.tai.WLCredential;
+//import com.worklight.oauth.tai.WLCredential;
 import com.ibm.json.java.JSONObject;
 import com.ibm.websphere.security.WSSecurityException;
 import com.ibm.websphere.security.auth.WSSubject;
@@ -62,13 +62,14 @@ public class RestClientServlet extends HttpServlet {
 		Subject callerSubject = WSSubject.getCallerSubject();
 		WSCredential callerCredential = callerSubject.getPublicCredentials(WSCredential.class).iterator().next();
 		
-		WLCredential callerWLCredential = callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
+		/*WLCredential callerWLCredential = callerSubject.getPublicCredentials(WLCredential.class).iterator().next();
 		
 		JSONObject securityContext = callerWLCredential.getSecurityContext();
 		String userIdentity = (String) securityContext.get("imf.sub");
 		JSONObject imfUser = (JSONObject) securityContext.get("imf.user");
 		JSONObject imfDevice = (JSONObject) securityContext.get("imf.device");
 		JSONObject imfApplication = (JSONObject) securityContext.get("imf.application");
+		*/
 		
 		return callerCredential;
 	}
